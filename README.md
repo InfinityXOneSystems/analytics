@@ -12,7 +12,7 @@ To answer the question "are you vortex ai, or gemini?":
 
 GitHub Copilot is:
 - An AI pair programmer developed by GitHub in collaboration with OpenAI
-- Powered by OpenAI's Codex model (based on GPT technology)
+- Powered by advanced language models from OpenAI
 - Designed to help developers write code faster and more efficiently
 - Integrated directly into development workflows through various IDEs and GitHub itself
 
