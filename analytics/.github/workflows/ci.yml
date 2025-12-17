@@ -1,0 +1,24 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Poetry
+        run: pip install poetry
+      - name: Install dependencies
+        run: poetry install
+      - name: Lint
+        run: poetry run ruff src/analytics_engine
+      - name: Type check
+        run: poetry run mypy src/analytics_engine
+      - name: Test
+        run: poetry run pytest --cov=src/analytics_engine --cov-fail-under=85
+      - name: Offline evals
+        run: poetry run python scripts/run_offline_evals.py
+      - name: Docker build
+        run: docker build .
