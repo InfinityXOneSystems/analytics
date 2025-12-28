@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "analytics"
+version = "0.1.0"
+description = "Omni-Industrial Hyper-Intelligence Analytics Engine"
+authors = ["InfinityXOneSystems"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+fastapi = "*"
+uvicorn = "*"
+structlog = "*"
+google-cloud-firestore = "*"
+google-cloud-pubsub = "*"
+prometheus-client = "*"
+networkx = "*"
+pydantic = "*"
+scikit-learn = "*"
+numpy = "*"
+pandas = "*"
+httpx = "*"
