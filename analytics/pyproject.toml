@@ -4,9 +4,11 @@ version = "0.1.0"
 description = "Omni-Industrial Hyper-Intelligence Analytics Engine"
 authors = ["InfinityXOneSystems"]
 
+packages = [{ include = "analytics_engine", from = "src" }]
+
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
-fastapi = "*"
+fastapi = ">=0.100.0"
 uvicorn = "*"
 structlog = "*"
 google-cloud-firestore = "*"
